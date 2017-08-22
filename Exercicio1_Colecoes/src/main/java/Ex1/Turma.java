@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.exercicio1_colecoes;
+package Ex1;
 
 import java.util.LinkedList;
 
