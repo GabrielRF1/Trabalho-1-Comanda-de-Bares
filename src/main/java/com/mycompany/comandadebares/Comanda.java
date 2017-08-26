@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Comanda implements Serializable {
 
-    private boolean estadoDaComanda;
+    protected boolean estadoDaComanda;
     protected Cliente cliente;
     protected Usuario usuario;
     protected List<Pedido> pedidos;

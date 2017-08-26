@@ -11,6 +11,10 @@ package com.mycompany.comandadebares;
  */
 public class Funcionario extends Usuario{
 
+    public Funcionario(String nome, String cpf) {
+        super(nome, cpf);
+    }
+
     
    
 }

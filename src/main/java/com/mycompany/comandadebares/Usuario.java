@@ -14,11 +14,18 @@ import java.util.List;
  */
 public abstract class Usuario implements Serializable {
 
-    protected String nome;
+    protected String nome, cpf;
     protected List<Comanda> comandas;
+
+    public Usuario(String nome,String cpf) {
+        this.nome = nome;
+        this.cpf=cpf;
+    }
+    
+    
     
     public void abrirComanda() {
-
+      
     }
 
     public void adicionarPedido() {
