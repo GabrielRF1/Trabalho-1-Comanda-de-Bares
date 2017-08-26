@@ -9,7 +9,7 @@ package com.mycompany.comandadebares;
  *
  * @author Programação
  */
-public class Gerente extends Funcionario {
+public class Gerente extends Usuario {
 
     public Gerente(String nome, String cpf) {
         super(nome, cpf);
@@ -21,7 +21,7 @@ public class Gerente extends Funcionario {
     public void receberPagamento() {
     }
 
-    public void fecharComanda(int n) {
-        comandas.get(n).fecharComanda();
+    public void fecharComanda() {
+        
     }
 }

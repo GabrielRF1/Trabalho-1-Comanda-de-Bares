@@ -6,30 +6,34 @@
 package com.mycompany.comandadebares;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
  * @author Programação
  */
-public abstract class Usuario implements Serializable {
+public class Usuario implements Serializable {
 
-    protected String nome;
-    protected List<Comanda> comandas;
+    private String nome, cpf;
+    private Map<String, Comanda> comandas;
 
-    public Usuario(String nome,String cpf) {
+    public Usuario(String nome, String cpf) {
         this.nome = nome;
-        this.cpf=cpf;
-    }
-    
-    
-    
-    public void abrirComanda() {
-      
+        this.cpf = cpf;
+        comandas = new HashMap<>();
     }
 
-    public void adicionarPedido() {
+    public void abrirComanda(Cliente cliente) {
+        Comanda c = new Comanda(cliente, this);
+        comandas.put(cliente.getNome(), c);
+    }
 
+    public void adicionarPedido(Cliente cliente, Pedido pe) {
+        Comanda c = comandas.get(cliente.getNome());
+        c.addPedido(pe);
+        
     }
 
     public void visualizarComanda() {

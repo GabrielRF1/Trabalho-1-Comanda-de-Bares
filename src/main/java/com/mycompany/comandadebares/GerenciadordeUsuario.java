@@ -26,8 +26,7 @@ public class GerenciadordeUsuario implements Serializable {
     }
 
     public boolean autenticarUsuario(String user) {
-        boolean existe = false;
-        existe = usuarios.containsKey(user);
+        boolean existe = usuarios.containsKey(user);
         return existe;
     }
 

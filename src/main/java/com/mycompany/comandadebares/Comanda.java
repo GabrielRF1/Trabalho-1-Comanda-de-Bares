@@ -14,11 +14,11 @@ import java.util.List;
  */
 public class Comanda implements Serializable {
 
-    protected boolean estadoDaComanda;
-    protected Cliente cliente;
-    protected Usuario usuario;
-    protected List<Pedido> pedidos;
-    protected float valorTotal;
+    private boolean estadoDaComanda;
+    private Cliente cliente;
+    private Usuario usuario;
+    private List<Pedido> pedidos;
+    private float valorTotal;
 
     public Comanda(Cliente cliente, Usuario usuario) {
         this.estadoDaComanda = true;
@@ -37,7 +37,7 @@ public class Comanda implements Serializable {
     }
 
     private void atualizarValorTotal(Pedido pe) {
-        valorTotal += (pe.quantidade * pe.valorDeVenda);
+        valorTotal += (pe.getQuantidade() * pe.getValorDeVenda());
 
     }
 }

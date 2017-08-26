@@ -11,7 +11,7 @@ package com.mycompany.comandadebares;
  */
 public class Cliente {
 
-    protected String nome, cpf;
+    private String nome, cpf;
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;
