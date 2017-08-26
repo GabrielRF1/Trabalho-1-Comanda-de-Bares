@@ -14,7 +14,7 @@ import java.util.List;
  */
 public abstract class Usuario implements Serializable {
 
-    protected String nome, cpf;
+    protected String nome;
     protected List<Comanda> comandas;
 
     public Usuario(String nome,String cpf) {
