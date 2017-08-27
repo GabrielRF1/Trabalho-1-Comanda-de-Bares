@@ -15,19 +15,18 @@ import java.util.Map;
  */
 public class GerenciadordeUsuario implements Serializable {
 
-    Map<String, String> usuarios;
+    Map<String, Usuario> usuarios;
 
     public GerenciadordeUsuario() {
         usuarios = new HashMap<>();
     }
 
-    public void addUsuario(String user, String senha) {
-        usuarios.put(user, senha);
+    public void addUsuario(Usuario u) {
+        usuarios.put(u.getLog(), u);
     }
 
     public boolean autenticarUsuario(String user) {
-        boolean existe = false;
-        existe = usuarios.containsKey(user);
+        boolean existe = usuarios.containsKey(user);
         return existe;
     }
 

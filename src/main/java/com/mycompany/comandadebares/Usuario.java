@@ -6,29 +6,46 @@
 package com.mycompany.comandadebares;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
  * @author Programação
  */
-public abstract class Usuario implements Serializable {
+public class Usuario implements Serializable {
 
-    protected String nome, cpf;
-    protected List<Comanda> comandas;
+    private String nome, log;
+    protected Map<Integer, Comanda> comandas; //arrumar:
+                                              //Mapa de comanda é inconsistente, visto que
+                                              //1-Apenas o funcionário q abriu uma comanda poderá atender aquela mesa
+                                              //2-se o funcionário que abriu a comanda não for o gerente, não será possível fechar a comanda
+                                              //nem receber paamento
 
-    public Usuario(String nome,String cpf) {
+    public Usuario(String nome, String log) {
         this.nome = nome;
-        this.cpf=cpf;
-    }
-    
-    
-    
-    public void abrirComanda() {
-      
+        this.log = log;
+        comandas = new HashMap<>();
     }
 
-    public void adicionarPedido() {
+    public String getNome() {
+        return nome;
+    }
+
+    public String getLog() {
+        return log;
+    }
+
+    public void abrirComanda(Cliente cliente) {
+        Comanda c = new Comanda(cliente, this);
+        comandas.put(cliente.getMesa(), c);
+    }
+
+    public void adicionarPedido(int mesa, Pedido pe) {
+        Comanda c = comandas.get(mesa);
+        c.addPedido(pe);
+        comandas.put(mesa, c);
 
     }
 

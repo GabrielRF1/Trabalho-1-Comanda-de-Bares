@@ -6,7 +6,9 @@
 package com.mycompany.comandadebares;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,30 +16,39 @@ import java.util.List;
  */
 public class Comanda implements Serializable {
 
-    protected boolean estadoDaComanda;
-    protected Cliente cliente;
-    protected Usuario usuario;
-    protected List<Pedido> pedidos;
-    protected float valorTotal;
+    private boolean comandaAberta;
+    private Cliente cliente;
+    private Usuario usuario;
+    private List<Pedido> pedidos;
+    private float valorTotal;
 
     public Comanda(Cliente cliente, Usuario usuario) {
-        this.estadoDaComanda = true;
+        this.comandaAberta = true;
         this.cliente = cliente;
         this.usuario = usuario;
+        this.pedidos = new ArrayList<>();
         valorTotal = 0;
     }
 
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
     public void fecharComanda() {
-        this.estadoDaComanda = false;
+        this.comandaAberta = false;
     }
 
     public void addPedido(Pedido pe) {
-        pedidos.add(pe);
-        atualizarValorTotal(pe);
+        if (comandaAberta) {
+            pedidos.add(pe);
+            atualizarValorTotal(pe);
+        } else {
+            JOptionPane.showMessageDialog(null, "Esta comanda está fechada");
+        }
     }
 
     private void atualizarValorTotal(Pedido pe) {
-        valorTotal += (pe.quantidade * pe.valorDeVenda);
+        valorTotal += (pe.getQuantidade() * pe.getValorDeVenda());
 
     }
 }
