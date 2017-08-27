@@ -5,6 +5,8 @@
  */
 package com.mycompany.comandadebares;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Programação
@@ -15,13 +17,24 @@ public class Gerente extends Usuario {
         super(nome, log);
     }
 
-    public void cancelarPedido() {
+    public void cancelarPedido(int mesa, Pedido pe) {
+        Comanda c = comandas.get(mesa);
+        if (c.getPedidos().contains(pe)) {
+            c.getPedidos().remove(pe);
+            comandas.put(mesa, c);
+        } else {
+            JOptionPane.showMessageDialog(null, "Pedido inexistênte");
+        }
     }
 
-    public void receberPagamento() {
+    public void receberPagamento(int mesa) {
+        Comanda c = comandas.get(mesa);
+        fecharComanda(mesa);
     }
 
-    public void fecharComanda() {
-        
+    private void fecharComanda(int mesa) {
+        Comanda c = comandas.get(mesa);
+        c.fecharComanda();
+        comandas.put(mesa, c);
     }
 }

@@ -11,9 +11,10 @@ package com.mycompany.comandadebares;
  */
 public class Cliente {
 
-    private String nome, mesa;
+    private String nome;
+    private int mesa;
 
-    public Cliente(String nome, String mesa) {
+    public Cliente(String nome, int mesa) {
         this.nome = nome;
         this.mesa = mesa;
     }
@@ -22,7 +23,7 @@ public class Cliente {
         return nome;
     }
 
-    public String getMesa() {
+    public int getMesa() {
         return mesa;
     }
 }

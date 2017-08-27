@@ -30,6 +30,10 @@ public class Comanda implements Serializable {
         valorTotal = 0;
     }
 
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
     public void fecharComanda() {
         this.comandaAberta = false;
     }
