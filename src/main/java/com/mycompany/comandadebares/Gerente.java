@@ -11,8 +11,8 @@ package com.mycompany.comandadebares;
  */
 public class Gerente extends Usuario {
 
-    public Gerente(String nome, String cpf) {
-        super(nome, cpf);
+    public Gerente(String nome, String log) {
+        super(nome, log);
     }
 
     public void cancelarPedido() {

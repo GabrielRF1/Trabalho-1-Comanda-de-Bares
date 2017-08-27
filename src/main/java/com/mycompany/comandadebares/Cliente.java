@@ -11,19 +11,18 @@ package com.mycompany.comandadebares;
  */
 public class Cliente {
 
-    private String nome, cpf;
+    private String nome, mesa;
 
-    public Cliente(String nome, String cpf) {
+    public Cliente(String nome, String mesa) {
         this.nome = nome;
-        this.cpf = cpf;
+        this.mesa = mesa;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getMesa() {
+        return mesa;
     }
-
 }

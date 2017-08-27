@@ -16,13 +16,21 @@ import java.util.Map;
  */
 public class Usuario implements Serializable {
 
-    private String nome, cpf;
+    private String nome, log;
     private Map<String, Comanda> comandas;
 
-    public Usuario(String nome, String cpf) {
+    public Usuario(String nome, String log) {
         this.nome = nome;
-        this.cpf = cpf;
+        this.log = log;
         comandas = new HashMap<>();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getLog() {
+        return log;
     }
 
     public void abrirComanda(Cliente cliente) {
@@ -33,7 +41,7 @@ public class Usuario implements Serializable {
     public void adicionarPedido(Cliente cliente, Pedido pe) {
         Comanda c = comandas.get(cliente.getNome());
         c.addPedido(pe);
-        
+
     }
 
     public void visualizarComanda() {
