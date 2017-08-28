@@ -7,7 +7,6 @@ package com.mycompany.comandadebares;
 
 import java.io.Serializable;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,8 +15,8 @@ import java.util.Map;
  */
 public class Usuario implements Serializable {
 
-    private String nome, log;
-    protected Map<Integer, Comanda> comandas; //arrumar:
+    private final String nome, log;
+    //arrumar:
                                               //Mapa de comanda é inconsistente, visto que
                                               //1-Apenas o funcionário q abriu uma comanda poderá atender aquela mesa
                                               //2-se o funcionário que abriu a comanda não for o gerente, não será possível fechar a comanda
@@ -26,7 +25,6 @@ public class Usuario implements Serializable {
     public Usuario(String nome, String log) {
         this.nome = nome;
         this.log = log;
-        comandas = new HashMap<>();
     }
 
     public String getNome() {
@@ -37,15 +35,15 @@ public class Usuario implements Serializable {
         return log;
     }
 
-    public void abrirComanda(Cliente cliente) {
+    public Comanda abrirComanda(Cliente cliente,Map<Integer,Comanda> mp) {
         Comanda c = new Comanda(cliente, this);
-        comandas.put(cliente.getMesa(), c);
+        return mp.put(cliente.getMesa(), c);
     }
 
-    public void adicionarPedido(int mesa, Pedido pe) {
-        Comanda c = comandas.get(mesa);
+    public Comanda adicionarPedido(int mesa, Pedido pe, Map<Integer,Comanda> mp) {
+        Comanda c = mp.get(mesa);
         c.addPedido(pe);
-        comandas.put(mesa, c);
+        return mp.put(mesa, c);
 
     }
 

@@ -17,9 +17,9 @@ import javax.swing.JOptionPane;
 public class Comanda implements Serializable {
 
     private boolean comandaAberta;
-    private Cliente cliente;
-    private Usuario usuario;
-    private List<Pedido> pedidos;
+    private final Cliente cliente;
+    private final Usuario usuario;
+    private final List<Pedido> pedidos;
     private float valorTotal;
 
     public Comanda(Cliente cliente, Usuario usuario) {
@@ -28,6 +28,10 @@ public class Comanda implements Serializable {
         this.usuario = usuario;
         this.pedidos = new ArrayList<>();
         valorTotal = 0;
+    }
+
+    public float getValorTotal() {
+        return valorTotal;
     }
 
     public List<Pedido> getPedidos() {

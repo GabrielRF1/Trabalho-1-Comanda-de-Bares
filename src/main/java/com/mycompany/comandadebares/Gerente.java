@@ -5,6 +5,7 @@
  */
 package com.mycompany.comandadebares;
 
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,24 +18,25 @@ public class Gerente extends Usuario {
         super(nome, log);
     }
 
-    public void cancelarPedido(int mesa, Pedido pe) {
-        Comanda c = comandas.get(mesa);
+    public Comanda cancelarPedido(int mesa, Pedido pe, Map<Integer, Comanda> mp) {
+        Comanda c = mp.get(mesa);
         if (c.getPedidos().contains(pe)) {
             c.getPedidos().remove(pe);
-            comandas.put(mesa, c);
+            return mp.put(mesa, c);
         } else {
             JOptionPane.showMessageDialog(null, "Pedido inexistênte");
         }
+        return null;
     }
 
-    public void receberPagamento(int mesa) {
-        Comanda c = comandas.get(mesa);
-        fecharComanda(mesa);
+    public int receberPagamento(int mesa, Map<Integer, Comanda> mp) {
+        Comanda c = mp.get(mesa);
+        return JOptionPane.showConfirmDialog(null, "Valor a pagar: R$" + (c.getValorTotal()));
     }
 
-    private void fecharComanda(int mesa) {
-        Comanda c = comandas.get(mesa);
+    public Comanda fecharComanda(int mesa, Map<Integer, Comanda> mp) {
+        Comanda c = mp.get(mesa);
         c.fecharComanda();
-        comandas.put(mesa, c);
+        return mp.put(mesa, c);//se colocar em mapa, um valor com a mesma chave de antes sobreescreve?
     }
 }
