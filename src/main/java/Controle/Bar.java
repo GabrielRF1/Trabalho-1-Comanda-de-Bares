@@ -5,7 +5,7 @@
  */
 package Controle;
 
-import Perisistencia.Persistencia;
+import com.mycompany.comandadebares.Persistencia;
 import com.mycompany.comandadebares.Comanda;
 import com.mycompany.comandadebares.GerenciadordeUsuario;
 import java.util.HashMap;

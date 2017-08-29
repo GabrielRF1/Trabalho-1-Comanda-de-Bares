@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Perisistencia;
+package com.mycompany.comandadebares;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -23,6 +23,7 @@ public class Persistencia<E> {
         ObjectOutputStream saida = new ObjectOutputStream(arquivo);
         saida.writeObject(elemento);
         saida.close();
+        arquivo.close();
     }
 
     public E RecuperarObjeto(String name) throws FileNotFoundException, IOException, ClassNotFoundException {
@@ -30,6 +31,7 @@ public class Persistencia<E> {
         ObjectInputStream entrada = new ObjectInputStream(arquivo);
         E elemento = (E) entrada.readObject();
         entrada.close();
+        arquivo.close();
         return elemento;
 
     }

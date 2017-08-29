@@ -5,6 +5,7 @@
  */
 package com.mycompany.comandadebares;
 
+import View.View;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,13 +15,8 @@ import java.util.Map;
  * @author Programação
  */
 public class Usuario implements Serializable {
-
+    View v = new View();
     private final String nome, log;
-    //arrumar:
-                                              //Mapa de comanda é inconsistente, visto que
-                                              //1-Apenas o funcionário q abriu uma comanda poderá atender aquela mesa
-                                              //2-se o funcionário que abriu a comanda não for o gerente, não será possível fechar a comanda
-                                              //nem receber paamento
 
     public Usuario(String nome, String log) {
         this.nome = nome;

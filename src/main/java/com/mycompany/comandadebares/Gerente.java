@@ -13,27 +13,27 @@ import javax.swing.JOptionPane;
  * @author Programação
  */
 public class Gerente extends Usuario {
-
+    
     public Gerente(String nome, String log) {
         super(nome, log);
     }
-
+    
     public Comanda cancelarPedido(int mesa, Pedido pe, Map<Integer, Comanda> mp) {
         Comanda c = mp.get(mesa);
         if (c.getPedidos().contains(pe)) {
             c.getPedidos().remove(pe);
             return mp.put(mesa, c);
         } else {
-            JOptionPane.showMessageDialog(null, "Pedido inexistênte");
+            v.mensagemdeErro("Pedido inexistente");
         }
         return null;
     }
-
+    
     public int receberPagamento(int mesa, Map<Integer, Comanda> mp) {
         Comanda c = mp.get(mesa);
         return JOptionPane.showConfirmDialog(null, "Valor a pagar: R$" + (c.getValorTotal()));
     }
-
+    
     public Comanda fecharComanda(int mesa, Map<Integer, Comanda> mp) {
         Comanda c = mp.get(mesa);
         c.fecharComanda();

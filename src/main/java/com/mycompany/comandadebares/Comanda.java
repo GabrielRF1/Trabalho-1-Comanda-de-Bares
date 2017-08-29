@@ -5,6 +5,7 @@
  */
 package com.mycompany.comandadebares;
 
+import View.View;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ import javax.swing.JOptionPane;
  * @author Programação
  */
 public class Comanda implements Serializable {
-
+    View vi = new View();
     private boolean comandaAberta;
     private final Cliente cliente;
     private final Usuario usuario;
@@ -47,7 +48,7 @@ public class Comanda implements Serializable {
             pedidos.add(pe);
             atualizarValorTotal(pe);
         } else {
-            JOptionPane.showMessageDialog(null, "Esta comanda está fechada");
+            vi.mensagemdeErro("Esta comanda está fechada");
         }
     }
 
