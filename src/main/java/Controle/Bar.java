@@ -18,7 +18,6 @@ import java.util.Map;
 public class Bar {
 
     public static void main(String[] args) {
-        Map<Integer, Comanda> comandas = new HashMap<>();
         GerenciadordeUsuario GU = new GerenciadordeUsuario();
         Persistencia p = new Persistencia();
     }

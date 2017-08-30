@@ -24,7 +24,6 @@ public class Gerente extends Usuario {
             c.getPedidos().remove(pe);
             return mp.put(mesa, c);
         } else {
-            v.mensagemdeErro("Pedido inexistente");
         }
         return null;
     }

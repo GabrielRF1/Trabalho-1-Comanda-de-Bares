@@ -15,8 +15,10 @@ import java.util.Map;
  * @author Programação
  */
 public class Usuario implements Serializable {
-    View v = new View();
+
     private final String nome, log;
+    private boolean gerente;
+    
 
     public Usuario(String nome, String log) {
         this.nome = nome;
@@ -30,6 +32,12 @@ public class Usuario implements Serializable {
     public String getLog() {
         return log;
     }
+
+    public boolean isGerente() {
+        return gerente;
+    }
+
+   
 
     public Comanda abrirComanda(Cliente cliente,Map<Integer,Comanda> mp) {
         Comanda c = new Comanda(cliente, this);

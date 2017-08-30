@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  * @author Programação
  */
 public class Comanda implements Serializable {
-    View vi = new View();
+    
     private boolean comandaAberta;
     private final Cliente cliente;
     private final Usuario usuario;
@@ -48,7 +48,6 @@ public class Comanda implements Serializable {
             pedidos.add(pe);
             atualizarValorTotal(pe);
         } else {
-            vi.mensagemdeErro("Esta comanda está fechada");
         }
     }
 
