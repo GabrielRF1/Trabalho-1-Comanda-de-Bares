@@ -14,10 +14,18 @@ import java.util.Map;
  */
 public class GerenciadordeComanda {
 
-    Map<Integer, Comanda> comandas;
+    Map<Cliente, Comanda> comandas;
 
     public GerenciadordeComanda() {
         comandas = new HashMap<>();
+    }
+
+    public void addNewOrUpdatedComanda(Comanda com) {
+        comandas.put(com.getCliente(), com);
+    }
+
+    public void removeaComanda(Comanda com) {
+        comandas.remove(com.getCliente());
     }
 
 }

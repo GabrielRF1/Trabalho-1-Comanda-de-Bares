@@ -26,4 +26,8 @@ public class Cliente {
     public int getMesa() {
         return mesa;
     }
+
+    public void changeCurrentTable(int newMesa) {
+        this.mesa = newMesa;
+    }
 }

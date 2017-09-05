@@ -15,7 +15,7 @@ import java.util.Map;
  *
  * @author Gabriel
  */
-public class Bar {
+public class Inicializador {
 
     public static void main(String[] args) {
         GerenciadordeUsuario GU = new GerenciadordeUsuario();

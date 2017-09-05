@@ -5,9 +5,7 @@
  */
 package com.mycompany.comandadebares;
 
-import View.View;
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -16,13 +14,13 @@ import java.util.Map;
  */
 public class Usuario implements Serializable {
 
-    private final String nome, log;
+    private final String nome, log, senha;
     private boolean gerente;
-    
 
-    public Usuario(String nome, String log) {
+    public Usuario(String nome, String log, String senha) {
         this.nome = nome;
         this.log = log;
+        this.senha = senha;
     }
 
     public String getNome() {
@@ -37,17 +35,19 @@ public class Usuario implements Serializable {
         return gerente;
     }
 
-   
-
-    public Comanda abrirComanda(Cliente cliente,Map<Integer,Comanda> mp) {
-        Comanda c = new Comanda(cliente, this);
-        return mp.put(cliente.getMesa(), c);
+    public String getSenha() {
+        return senha;
     }
 
-    public Comanda adicionarPedido(int mesa, Pedido pe, Map<Integer,Comanda> mp) {
-        Comanda c = mp.get(mesa);
+    public Comanda abrirComanda(Cliente cliente, Map<Cliente, Comanda> mp) {
+        Comanda c = new Comanda(cliente, this);
+        return c;// retorna c, pois esse método entra como parametro de outro método do gerenciador 
+    }            // assim como os outros
+
+    public Comanda adicionarPedido(Cliente cliente, Produto pe, Map<Cliente, Comanda> mp) {
+        Comanda c = mp.get(cliente);
         c.addPedido(pe);
-        return mp.put(mesa, c);
+        return c;
 
     }
 
@@ -55,4 +55,24 @@ public class Usuario implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public Comanda cancelarPedido(Cliente cliente, Produto pe, Map<Cliente, Comanda> mp) {
+        Comanda c = mp.get(cliente);
+        if (c.getPedidos().contains(pe)) {
+            c.matarUmPedido(pe);
+            return c; 
+        } else {
+        }
+        return null;
+    }
+
+    public int receberPagamento(Cliente cliente, Map<Cliente, Comanda> mp) {
+        Comanda c = mp.get(cliente);
+        return 0;
+    }
+
+    public Comanda fecharComanda(Cliente cliente, Map<Cliente, Comanda> mp) {
+        Comanda c = mp.get(cliente);
+        c.fecharComanda();
+        return c;
+    }
 }

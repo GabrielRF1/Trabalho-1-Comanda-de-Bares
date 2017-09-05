@@ -7,39 +7,34 @@ package com.mycompany.comandadebares;
 
 /**
  *
- * @author Programação
+ * @author 17100518
  */
-public class Pedido {
+public abstract class Pedido {
 
-    private final String descricao;
-    private final int quantidade;
-    private final float valorDeVenda;
-    private final float precoDecusto;
-    private float lucroLocal, cargaTributaria;
+    protected int quantidade;
+    protected String descricao;
 
-    public Pedido(String descricao, int quantidade, float valorDeVenda, float precoDecusto) {
-        this.descricao = descricao;
+    public Pedido(int quantidade, String descricao) {
         this.quantidade = quantidade;
-        this.valorDeVenda = valorDeVenda;
-        this.precoDecusto = precoDecusto;
+        this.descricao = descricao;
     }
 
-    public float calcularcagaTributaria(int porcentagemDeImposto) {
-        cargaTributaria = (precoDecusto + calcLucro()) * (porcentagemDeImposto / 100);
-        return cargaTributaria;
-    }
-
-    private float calcLucro() {
-        lucroLocal = (valorDeVenda - precoDecusto) - cargaTributaria;
-        return lucroLocal;
-    }
+    public abstract double getValor();
 
     public int getQuantidade() {
         return quantidade;
     }
 
-    public float getValorDeVenda() {
-        return valorDeVenda;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
 }

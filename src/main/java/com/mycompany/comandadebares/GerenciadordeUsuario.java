@@ -25,9 +25,15 @@ public class GerenciadordeUsuario implements Serializable {
         usuarios.put(u.getLog(), u);
     }
 
-    public boolean autenticarUsuario(String user) {
-        boolean existe = usuarios.containsKey(user);
-        return existe;
+    public boolean autenticarUsuarioSenha(String user, String senha) {
+        if (usuarios.containsKey(user)) {
+            Usuario u = usuarios.get(user);
+            String actualSenha = u.getSenha();
+            if (senha.equals(actualSenha)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
