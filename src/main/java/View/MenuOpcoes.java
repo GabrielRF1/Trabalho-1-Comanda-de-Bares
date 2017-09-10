@@ -27,94 +27,121 @@ public class MenuOpcoes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gabriel's Restaurant");
         setBackground(new java.awt.Color(204, 204, 255));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.setLayout(new java.awt.GridLayout());
 
         jLabel8.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
-        jLabel8.setText("                     Selecione uma ação:");
+        jLabel8.setText("Selecione uma ação:");
         jPanel1.add(jLabel8);
 
         getContentPane().add(jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel2.setLayout(new java.awt.CardLayout());
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(new java.awt.GridLayout(6, 1));
 
-        jLabel1.setBackground(new java.awt.Color(204, 204, 255));
-        jLabel1.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel1.setText("            Abrir Comanda");
-        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(jLabel1, "card2");
+        jRadioButton1.setBackground(new java.awt.Color(204, 204, 255));
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jRadioButton1.setText("Abrir uma comanda");
+        jPanel2.add(jRadioButton1);
 
-        jLabel2.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel2.setText("         Adicionar Pedido");
-        jLabel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(jLabel2, "card3");
+        jRadioButton2.setBackground(new java.awt.Color(204, 204, 255));
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jRadioButton2.setText("Adicionar Pedido em uma comanda");
+        jPanel2.add(jRadioButton2);
 
-        jLabel3.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel3.setText("          Cancelar pedido");
-        jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(jLabel3, "card4");
+        jRadioButton3.setBackground(new java.awt.Color(204, 204, 255));
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jRadioButton3.setText("Cancelar um Pedido");
+        jPanel2.add(jRadioButton3);
 
-        jLabel4.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel4.setText("       receber pagamento");
-        jLabel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(jLabel4, "card5");
+        jRadioButton4.setBackground(new java.awt.Color(204, 204, 255));
+        buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jRadioButton4.setText("Receber Pagamento");
+        jPanel2.add(jRadioButton4);
 
-        jLabel5.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel5.setText("          fechar comanda");
-        jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(jLabel5, "card6");
+        jRadioButton5.setBackground(new java.awt.Color(204, 204, 255));
+        buttonGroup1.add(jRadioButton5);
+        jRadioButton5.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jRadioButton5.setText("Fechar uma comanda");
+        jPanel2.add(jRadioButton5);
 
-        jLabel6.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel6.setText("       Visualisar comanda");
-        jLabel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(jLabel6, "card7");
+        jRadioButton6.setBackground(new java.awt.Color(204, 204, 255));
+        buttonGroup1.add(jRadioButton6);
+        jRadioButton6.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jRadioButton6.setText("Visualizar uma comanda");
+        jPanel2.add(jRadioButton6);
 
         getContentPane().add(jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton3.setFont(new java.awt.Font("Stencil", 0, 11)); // NOI18N
-        jButton3.setText("Anterior");
-        jPanel3.add(jButton3);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle2.png"))); // NOI18N
+        jLabel1.setToolTipText("E.g.: Icon made by Freepik from www.flaticon.com ");
+        jPanel3.add(jLabel1);
 
-        jButton1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jLabel3.setText("                                             ");
+        jPanel3.add(jLabel3);
+
+        jButton1.setFont(new java.awt.Font("Stencil", 0, 30)); // NOI18N
         jButton1.setText("OK!");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton1);
 
-        jButton2.setFont(new java.awt.Font("Stencil", 0, 11)); // NOI18N
-        jButton2.setText("Próximo");
-        jPanel3.add(jButton2);
+        jLabel2.setText("                                                             ");
+        jPanel3.add(jLabel2);
 
         getContentPane().add(jPanel3);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (buttonGroup1.getSelection().equals(jRadioButton1)) {
+        } else if (buttonGroup1.getSelection().equals(jRadioButton2)) {
+        } else if (buttonGroup1.getSelection().equals(jRadioButton3)) {
+        } else if (buttonGroup1.getSelection().equals(jRadioButton4)) {
+        } else if (buttonGroup1.getSelection().equals(jRadioButton5)) {
+        } else {
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -142,23 +169,26 @@ public class MenuOpcoes extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MenuOpcoes().setVisible(true);
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
     // End of variables declaration//GEN-END:variables
 }

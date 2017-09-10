@@ -15,12 +15,15 @@ import View.View;
  * @author Gabriel
  */
 public class Inicializador {
-public GerenciadordeUsuario GU = new GerenciadordeUsuario();
-public GerenciadordeComanda GC = new GerenciadordeComanda();
+
+    public static GerenciadordeUsuario GU;
+    public static GerenciadordeComanda GC;
+
     public static void main(String[] args) {
         View vi = new View();
         Persistencia p = new Persistencia();
-        
+        GU = new GerenciadordeUsuario();
+        GC = new GerenciadordeComanda();
         vi.TeladeLogin();
     }
 }

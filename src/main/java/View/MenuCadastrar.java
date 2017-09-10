@@ -7,7 +7,6 @@ package View;
 
 import Modelo.Usuario;
 import com.mycompany.comandadebares.Inicializador;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -17,9 +16,8 @@ import javax.swing.JOptionPane;
  */
 public class MenuCadastrar extends javax.swing.JFrame {
 
-    private ImageIcon thumbsUP = new ImageIcon(getClass().getResource("restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"));
+    private final ImageIcon thumbsUP = new ImageIcon(getClass().getResource("restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"));
 
-    Inicializador i = new Inicializador();
 
     /**
      * Creates new form MenuCadastrar
@@ -55,6 +53,7 @@ public class MenuCadastrar extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gabriel's Restaurant");
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 255));
@@ -105,7 +104,7 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
-        jButton1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
         jButton1.setText("cADASTRAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,8 +113,9 @@ public class MenuCadastrar extends javax.swing.JFrame {
         });
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"))); // NOI18N
+        jLabel7.setToolTipText("E.g.: Icon made by Freepik from www.flaticon.com ");
 
-        jButton2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
         jButton2.setText("VOLTAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,10 +156,11 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         boolean existe;
-        existe = i.GU.ConferirExistenciaDoLog(jTFLog.getText());
+        existe = Inicializador.GU.ConferirExistenciaDoLog(jTFLog.getText());
         if (!existe) {
-            i.GU.addUsuario(new Usuario(jTFNome.getText(), jTFLog.getText(), jPFSenha.getText(), jRBisGerente.isSelected()));
+            Inicializador.GU.addUsuario(new Usuario(jTFNome.getText(), jTFLog.getText(), jPFSenha.getText(), jRBisGerente.isSelected()));
             JOptionPane.showMessageDialog(this, "Cadastrado com sucesso", "SUCESSO!!!Icon made by [https://www.flaticon.com/authors/dave-gandy] from www.flaticon.com ", JOptionPane.INFORMATION_MESSAGE, thumbsUP);
+            jButton2ActionPerformed(evt);
         } else {
             JOptionPane.showMessageDialog(this, "Login já existente", "ERRO", JOptionPane.ERROR_MESSAGE);
         }
@@ -167,6 +168,7 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         MenuLogin menlog = new MenuLogin();
+        this.dispose();
         menlog.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed

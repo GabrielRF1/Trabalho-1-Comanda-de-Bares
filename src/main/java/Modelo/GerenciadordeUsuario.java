@@ -16,9 +16,13 @@ import java.util.Map;
 public class GerenciadordeUsuario implements Serializable {
 
     private Map<String, Usuario> usuarios;
-
+    private Usuario usuarioLogado;
     public GerenciadordeUsuario() {
         usuarios = new HashMap<>();
+    }
+
+    public Usuario getUsuarioLogado() {
+        return usuarioLogado;
     }
 
     public Map<String, Usuario> getUsuarios() {
@@ -34,6 +38,7 @@ public class GerenciadordeUsuario implements Serializable {
             Usuario u = usuarios.get(user);
             String actualSenha = u.getSenha();
             if (senha.equals(actualSenha)) {
+                usuarioLogado=usuarios.get(user);
                 return true;
             }
         }

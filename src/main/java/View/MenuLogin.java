@@ -7,17 +7,14 @@ package View;
 
 import java.awt.Color;
 
-import Modelo.Usuario;
-import Modelo.GerenciadordeUsuario;
+
 import com.mycompany.comandadebares.Inicializador;
 import javax.swing.JOptionPane;
-import jdk.nashorn.internal.runtime.regexp.joni.exception.JOniException;
 /**
  *
  * @author Programação
  */
 public class MenuLogin extends javax.swing.JFrame {
-    Inicializador inicializador= new Inicializador();
     /**
      * Creates new form MenuCad_Log
      */
@@ -49,6 +46,7 @@ public class MenuLogin extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gabriel's Restaurant");
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
@@ -78,11 +76,6 @@ public class MenuLogin extends javax.swing.JFrame {
                 jTFLoginMouseClicked(evt);
             }
         });
-        jTFLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTFLoginActionPerformed(evt);
-            }
-        });
         jPanel5.add(jTFLogin);
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
@@ -95,11 +88,6 @@ public class MenuLogin extends javax.swing.JFrame {
         jPFSenha.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPFSenhaMouseClicked(evt);
-            }
-        });
-        jPFSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPFSenhaActionPerformed(evt);
             }
         });
         jPanel5.add(jPFSenha);
@@ -186,14 +174,6 @@ mecad.setVisible(true);
         
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
-    private void jTFLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFLoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTFLoginActionPerformed
-
-    private void jPFSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPFSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPFSenhaActionPerformed
-
     private void jPFSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPFSenhaMouseClicked
         jPFSenha.setText("");
         jPFSenha.setForeground(Color.BLACK);
@@ -201,9 +181,10 @@ mecad.setVisible(true);
     }//GEN-LAST:event_jPFSenhaMouseClicked
 
     private void jBEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEntrarActionPerformed
-        boolean estaAutenticado= inicializador.GU.autenticarUsuarioSenha(jTFLogin.getText(), jPFSenha.getText());
+        boolean estaAutenticado= Inicializador.GU.autenticarUsuarioSenha(jTFLogin.getText(), jPFSenha.getText());
+        MenuOpcoes menop = new MenuOpcoes();
         if(estaAutenticado){
-        return;
+            menop.setVisible(true);
         }else{
             JOptionPane.showMessageDialog(this, "Usuário ou senha incorreto", "ERRO!!", JOptionPane.ERROR_MESSAGE);
         }
