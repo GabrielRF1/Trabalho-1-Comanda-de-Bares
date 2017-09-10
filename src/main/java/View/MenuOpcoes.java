@@ -46,6 +46,7 @@ public class MenuOpcoes extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gabriel's Restaurant");
         setBackground(new java.awt.Color(204, 204, 255));
+        setResizable(false);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));

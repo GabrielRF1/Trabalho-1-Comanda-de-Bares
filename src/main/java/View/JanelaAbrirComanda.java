@@ -47,6 +47,7 @@ public class JanelaAbrirComanda extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gabriel's Restaurant");
+        setResizable(false);
         getContentPane().setLayout(new java.awt.GridLayout(3, 1));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
