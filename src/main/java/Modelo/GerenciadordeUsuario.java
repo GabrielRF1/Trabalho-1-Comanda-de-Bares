@@ -30,7 +30,7 @@ public class GerenciadordeUsuario implements Serializable {
     }
 
     public boolean autenticarUsuarioSenha(String user, String senha) {
-        if (usuarios.containsKey(user)) {
+        if (ConferirExistenciaDoLog(user)) {
             Usuario u = usuarios.get(user);
             String actualSenha = u.getSenha();
             if (senha.equals(actualSenha)) {
@@ -39,5 +39,7 @@ public class GerenciadordeUsuario implements Serializable {
         }
         return false;
     }
-
+    public boolean ConferirExistenciaDoLog(String user){
+    return usuarios.containsKey(user);
+    }
 }

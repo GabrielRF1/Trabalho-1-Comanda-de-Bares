@@ -17,10 +17,11 @@ public class Usuario implements Serializable {
     private final String nome, log, senha;
     private boolean gerente;
 
-    public Usuario(String nome, String log, String senha) {
+    public Usuario(String nome, String log, String senha, boolean gerente) {
         this.nome = nome;
         this.log = log;
         this.senha = senha;
+        this.gerente=gerente;
     }
 
     public String getNome() {

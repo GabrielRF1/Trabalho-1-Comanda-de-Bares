@@ -6,16 +6,18 @@
 package View;
 
 import java.awt.Color;
-import Modelo.Comanda;
+
 import Modelo.Usuario;
 import Modelo.GerenciadordeUsuario;
-import Modelo.GerenciadordeComanda;
+import com.mycompany.comandadebares.Inicializador;
+import javax.swing.JOptionPane;
+import jdk.nashorn.internal.runtime.regexp.joni.exception.JOniException;
 /**
  *
  * @author Programação
  */
 public class MenuLogin extends javax.swing.JFrame {
-
+    Inicializador inicializador= new Inicializador();
     /**
      * Creates new form MenuCad_Log
      */
@@ -108,6 +110,7 @@ public class MenuLogin extends javax.swing.JFrame {
 
         jBEntrar.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
         jBEntrar.setText("Entrar!");
+        jBEntrar.setToolTipText("Entrar com os dados fornecidos");
         jBEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBEntrarActionPerformed(evt);
@@ -118,6 +121,7 @@ public class MenuLogin extends javax.swing.JFrame {
 
         jBCadastrar.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
         jBCadastrar.setText("CADASTRe-SE");
+        jBCadastrar.setToolTipText("Criar um novo cadastro");
         jBCadastrar.setMaximumSize(new java.awt.Dimension(109, 27));
         jBCadastrar.setMinimumSize(new java.awt.Dimension(109, 27));
         jBCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -126,43 +130,42 @@ public class MenuLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("IMAGEM AQUI");
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"))); // NOI18N
+        jLabel6.setToolTipText("E.g.: Icon made by Freepik from www.flaticon.com");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(jBEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addComponent(jBCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)
+                        .addGap(90, 90, 90))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jBEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(90, 90, 90))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jBEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addGap(12, 12, 12)
+                        .addComponent(jBEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jBCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)
+                        .addComponent(jBCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel6);
@@ -177,7 +180,10 @@ jTFLogin.setForeground(Color.BLACK);
     }//GEN-LAST:event_jTFLoginMouseClicked
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        // TODO add your handling code here:
+MenuCadastrar mecad= new MenuCadastrar();
+this.dispose();
+mecad.setVisible(true);
+        
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
     private void jTFLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFLoginActionPerformed
@@ -195,7 +201,12 @@ jTFLogin.setForeground(Color.BLACK);
     }//GEN-LAST:event_jPFSenhaMouseClicked
 
     private void jBEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEntrarActionPerformed
-        
+        boolean estaAutenticado= inicializador.GU.autenticarUsuarioSenha(jTFLogin.getText(), jPFSenha.getText());
+        if(estaAutenticado){
+        return;
+        }else{
+            JOptionPane.showMessageDialog(this, "Usuário ou senha incorreto", "ERRO!!", JOptionPane.ERROR_MESSAGE);
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jBEntrarActionPerformed
 

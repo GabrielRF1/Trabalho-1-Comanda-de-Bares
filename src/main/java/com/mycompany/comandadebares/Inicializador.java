@@ -15,10 +15,9 @@ import View.View;
  * @author Gabriel
  */
 public class Inicializador {
-
+public GerenciadordeUsuario GU = new GerenciadordeUsuario();
+public GerenciadordeComanda GC = new GerenciadordeComanda();
     public static void main(String[] args) {
-        GerenciadordeUsuario GU = new GerenciadordeUsuario();
-        GerenciadordeComanda GC = new GerenciadordeComanda();
         View vi = new View();
         Persistencia p = new Persistencia();
         

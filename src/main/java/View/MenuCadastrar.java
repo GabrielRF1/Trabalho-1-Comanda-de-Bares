@@ -5,11 +5,21 @@
  */
 package View;
 
+import Modelo.Usuario;
+import com.mycompany.comandadebares.Inicializador;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Programação
  */
 public class MenuCadastrar extends javax.swing.JFrame {
+
+    private ImageIcon thumbsUP = new ImageIcon(getClass().getResource("restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"));
+
+    Inicializador i = new Inicializador();
 
     /**
      * Creates new form MenuCadastrar
@@ -32,16 +42,17 @@ public class MenuCadastrar extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTFNome = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTFLog = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jPFSenha = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        jRBisGerente = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
@@ -65,30 +76,30 @@ public class MenuCadastrar extends javax.swing.JFrame {
         jLabel1.setText("NOME");
         jPanel1.add(jLabel1);
 
-        jTextField1.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField1.setText("nome de verdade");
-        jPanel1.add(jTextField1);
+        jTFNome.setForeground(new java.awt.Color(204, 204, 204));
+        jTFNome.setText("nome de verdade");
+        jPanel1.add(jTFNome);
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
         jLabel2.setText("LOGIN");
         jPanel1.add(jLabel2);
 
-        jTextField2.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField2.setText("Login do sistema");
-        jPanel1.add(jTextField2);
+        jTFLog.setForeground(new java.awt.Color(204, 204, 204));
+        jTFLog.setText("Login do sistema");
+        jPanel1.add(jTFLog);
 
         jLabel3.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
         jLabel3.setText("SENHA");
         jPanel1.add(jLabel3);
 
-        jPasswordField1.setForeground(new java.awt.Color(204, 204, 204));
-        jPasswordField1.setText("jPasswordField1");
-        jPanel1.add(jPasswordField1);
+        jPFSenha.setForeground(new java.awt.Color(204, 204, 204));
+        jPFSenha.setText("jPasswordField1");
+        jPanel1.add(jPFSenha);
         jPanel1.add(jLabel6);
 
-        jRadioButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jRadioButton1.setText("GERENTE");
-        jPanel1.add(jRadioButton1);
+        jRBisGerente.setBackground(new java.awt.Color(204, 204, 255));
+        jRBisGerente.setText("GERENTE");
+        jPanel1.add(jRBisGerente);
 
         getContentPane().add(jPanel1);
 
@@ -96,34 +107,69 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
         jButton1.setText("cADASTRAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jLabel7.setText("IMAGEM AQUI");
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"))); // NOI18N
+
+        jButton2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jButton2.setText("VOLTAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        boolean existe;
+        existe = i.GU.ConferirExistenciaDoLog(jTFLog.getText());
+        if (!existe) {
+            i.GU.addUsuario(new Usuario(jTFNome.getText(), jTFLog.getText(), jPFSenha.getText(), jRBisGerente.isSelected()));
+            JOptionPane.showMessageDialog(this, "Cadastrado com sucesso", "SUCESSO!!!Icon made by [https://www.flaticon.com/authors/dave-gandy] from www.flaticon.com ", JOptionPane.INFORMATION_MESSAGE, thumbsUP);
+        } else {
+            JOptionPane.showMessageDialog(this, "Login já existente", "ERRO", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        MenuLogin menlog = new MenuLogin();
+        menlog.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,6 +208,7 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -169,12 +216,12 @@ public class MenuCadastrar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPasswordField jPFSenha;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JRadioButton jRBisGerente;
+    private javax.swing.JTextField jTFLog;
+    private javax.swing.JTextField jTFNome;
     // End of variables declaration//GEN-END:variables
 }
