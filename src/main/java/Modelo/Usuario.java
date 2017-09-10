@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.comandadebares;
+package Modelo;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -39,40 +39,41 @@ public class Usuario implements Serializable {
         return senha;
     }
 
-    public Comanda abrirComanda(Cliente cliente, Map<Cliente, Comanda> mp) {
+    public Comanda AbrirComanda(Cliente cliente) {
         Comanda c = new Comanda(cliente, this);
         return c;// retorna c, pois esse método entra como parametro de outro método do gerenciador 
     }            // assim como os outros
 
-    public Comanda adicionarPedido(Cliente cliente, Produto pe, Map<Cliente, Comanda> mp) {
+    public Comanda AdicionarPedido(Cliente cliente, Produto pe, Map<Cliente, Comanda> mp) {
         Comanda c = mp.get(cliente);
         c.addPedido(pe);
         return c;
 
     }
 
-    public void visualizarComanda() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Comanda cancelarPedido(Cliente cliente, Produto pe, Map<Cliente, Comanda> mp) {
+    public Comanda CancelarPedido(Cliente cliente, Produto pe, Map<Cliente, Comanda> mp) {
         Comanda c = mp.get(cliente);
         if (c.getPedidos().contains(pe)) {
             c.matarUmPedido(pe);
-            return c; 
+            return c;
         } else {
         }
         return null;
     }
 
-    public int receberPagamento(Cliente cliente, Map<Cliente, Comanda> mp) {
+    public Comanda ReceberPagamento(Cliente cliente, Map<Cliente, Comanda> mp) {
         Comanda c = mp.get(cliente);
-        return 0;
+        c.setValorTotal(0.0f);
+        return c;
     }
 
-    public Comanda fecharComanda(Cliente cliente, Map<Cliente, Comanda> mp) {
+    public Comanda FecharComanda(Cliente cliente, Map<Cliente, Comanda> mp) {
         Comanda c = mp.get(cliente);
         c.fecharComanda();
         return c;
+    }
+
+    public void VisualizarComanda() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

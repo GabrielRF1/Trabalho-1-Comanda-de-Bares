@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.comandadebares;
+package Modelo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -19,12 +19,22 @@ public class Comanda implements Serializable {
     private final Cliente cliente;
     private final Usuario usuario;
     private final List<Pedido> pedidos;
+    private float valorTotal;
 
     public Comanda(Cliente cliente, Usuario usuario) {
         this.comandaAberta = true;
         this.cliente = cliente;
         this.usuario = usuario;
         this.pedidos = new ArrayList<>();
+        this.valorTotal = 0.0f;
+    }
+
+    public float getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(float valorTotal) {
+        this.valorTotal = valorTotal;
     }
 
     public List<Pedido> getPedidos() {
@@ -42,21 +52,17 @@ public class Comanda implements Serializable {
     public void addPedido(Pedido pe) {
         if (comandaAberta) {
             pedidos.add(pe);
+            AtualizarValorTotal(pe);
         } else {
         }
     }
 
     public void matarUmPedido(Pedido pe) {
-            pedidos.remove(pe);
-       
+        pedidos.remove(pe);
+
     }
 
-    public float getValorTotal(Pedido pe) {
-        float valorTotal = 0;
-        for (Pedido iterador : pedidos) {
-            valorTotal += iterador.getValor();
-        }
-        return valorTotal;
-
+    private void AtualizarValorTotal(Pedido pe) {
+        valorTotal += pe.getValor();
     }
 }

@@ -12,7 +12,12 @@ import javax.swing.JOptionPane;
  * @author 17100518
  */
 public class View {
-    public void mensagemdeErro(String string){
+    public void MensagemdeErro(String string){
         JOptionPane.showMessageDialog(null, string);
+    }
+    public void TeladeLogin(){
+        MenuLogin tLog = new MenuLogin();
+        tLog.setVisible(true);
+        
     }
 }
