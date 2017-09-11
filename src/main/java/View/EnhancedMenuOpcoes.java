@@ -23,8 +23,11 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setSize(436, 450);
+        try{
         jLabel2.setText(Inicializador.GU.getUsuarioLogado().getNome());
-    }
+        }catch(NullPointerException e){
+        } 
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,6 +56,17 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jSeparator10 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jTextField3 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jPanel16 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -65,17 +79,6 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        jPanel16 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
@@ -193,6 +196,97 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
         jPanel3.setLayout(new java.awt.CardLayout());
 
+        jPanel9.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.Y_AXIS));
+
+        jPanel14.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel17.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel17.setText("Adicionar pedido");
+        jPanel14.add(jLabel17);
+
+        jPanel9.add(jPanel14);
+
+        jPanel15.setBackground(new java.awt.Color(204, 204, 255));
+
+        jTextField3.setForeground(new java.awt.Color(204, 204, 204));
+        jTextField3.setText("Número da mesa");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione um pedido", " ", "X-Burger", "X-Salada", "X-Bacon", "X-Egg", "Misto Quente", "Iscas de Frango", "Pastel de Carne", "Coca-Cola", "Cerveja", "Suco" }));
+
+        jTextPane1.setEditable(false);
+        jScrollPane3.setViewportView(jTextPane1);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBox1, 0, 184, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3))
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))))
+        );
+
+        jPanel9.add(jPanel15);
+
+        jPanel16.setBackground(new java.awt.Color(204, 204, 255));
+
+        jButton2.setFont(new java.awt.Font("Sylfaen", 1, 18)); // NOI18N
+        jButton2.setText("Adicionar");
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"))); // NOI18N
+        jLabel18.setToolTipText("E.g.: Icon made by Freepik from www.flaticon.com ");
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel18)
+                .addGap(117, 117, 117)
+                .addComponent(jButton2)
+                .addContainerGap(70, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jPanel9.add(jPanel16);
+
+        jPanel3.add(jPanel9, "card3");
+
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.PAGE_AXIS));
 
@@ -248,97 +342,6 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel2.add(jPanel7);
 
         jPanel3.add(jPanel2, "card2");
-
-        jPanel9.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.Y_AXIS));
-
-        jPanel14.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        jLabel17.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel17.setText("Adicionar pedido");
-        jPanel14.add(jLabel17);
-
-        jPanel9.add(jPanel14);
-
-        jPanel15.setBackground(new java.awt.Color(204, 204, 255));
-
-        jTextField3.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField3.setText("Número da mesa");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione um pedido", " ", "X-Burger", "X-Salada", "X-Bacon", "X-Egg", "Misto Quente", "Iscas de Frango", "Pastel de Carne", "Coca-Cola", "Cerveja", "Suco" }));
-
-        jTextPane1.setEditable(false);
-        jScrollPane3.setViewportView(jTextPane1);
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBox1, 0, 184, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3))
-                .addContainerGap(49, Short.MAX_VALUE))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34))))
-        );
-
-        jPanel9.add(jPanel15);
-
-        jPanel16.setBackground(new java.awt.Color(204, 204, 255));
-
-        jButton2.setFont(new java.awt.Font("Sylfaen", 1, 18)); // NOI18N
-        jButton2.setText("Adicionar");
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"))); // NOI18N
-        jLabel18.setToolTipText("E.g.: Icon made by Freepik from www.flaticon.com ");
-
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel18)
-                .addGap(117, 117, 117)
-                .addComponent(jButton2)
-                .addContainerGap(70, Short.MAX_VALUE))
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
-
-        jPanel9.add(jPanel16);
-
-        jPanel3.add(jPanel9, "card3");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
