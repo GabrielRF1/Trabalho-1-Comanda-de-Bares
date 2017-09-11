@@ -7,6 +7,7 @@ package View;
 
 import Modelo.Usuario;
 import com.mycompany.comandadebares.Inicializador;
+import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -16,14 +17,13 @@ import javax.swing.JOptionPane;
  */
 public class MenuCadastrar extends javax.swing.JFrame {
 
-    private final ImageIcon thumbsUP = new ImageIcon(getClass().getResource("restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"));
-
-
     /**
      * Creates new form MenuCadastrar
      */
     public MenuCadastrar() {
         initComponents();
+        setSize(436, 450);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -61,7 +61,7 @@ public class MenuCadastrar extends javax.swing.JFrame {
         jPanel4.setLayout(new java.awt.GridLayout(2, 0));
 
         jLabel4.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel4.setText("GABRIEL'S RESTAURANT");
+        jLabel4.setText("GABRIEL'S BIGDINNER");
         jPanel4.add(jLabel4);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -78,6 +78,11 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
         jTFNome.setForeground(new java.awt.Color(204, 204, 204));
         jTFNome.setText("nome de verdade");
+        jTFNome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTFNomeMouseClicked(evt);
+            }
+        });
         jPanel1.add(jTFNome);
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
@@ -86,6 +91,11 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
         jTFLog.setForeground(new java.awt.Color(204, 204, 204));
         jTFLog.setText("Login do sistema");
+        jTFLog.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTFLogMouseClicked(evt);
+            }
+        });
         jPanel1.add(jTFLog);
 
         jLabel3.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
@@ -94,6 +104,11 @@ public class MenuCadastrar extends javax.swing.JFrame {
 
         jPFSenha.setForeground(new java.awt.Color(204, 204, 204));
         jPFSenha.setText("jPasswordField1");
+        jPFSenha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPFSenhaMouseClicked(evt);
+            }
+        });
         jPanel1.add(jPFSenha);
         jPanel1.add(jLabel6);
 
@@ -106,14 +121,14 @@ public class MenuCadastrar extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
         jButton1.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jButton1.setText("cADASTRAR");
+        jButton1.setText("CADASTRAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle3.png"))); // NOI18N
         jLabel7.setToolTipText("E.g.: Icon made by Freepik from www.flaticon.com ");
 
         jButton2.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
@@ -129,9 +144,9 @@ public class MenuCadastrar extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -147,7 +162,7 @@ public class MenuCadastrar extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2);
@@ -160,7 +175,7 @@ public class MenuCadastrar extends javax.swing.JFrame {
         existe = Inicializador.GU.ConferirExistenciaDoLog(jTFLog.getText());
         if (!existe) {
             Inicializador.GU.addUsuario(new Usuario(jTFNome.getText(), jTFLog.getText(), jPFSenha.getText(), jRBisGerente.isSelected()));
-            JOptionPane.showMessageDialog(this, "Cadastrado com sucesso", "SUCESSO!!!Icon made by [https://www.flaticon.com/authors/dave-gandy] from www.flaticon.com ", JOptionPane.INFORMATION_MESSAGE, thumbsUP);
+            JOptionPane.showMessageDialog(this, "Cadastrado com sucesso", "SUCESSO!!!", JOptionPane.INFORMATION_MESSAGE);
             jButton2ActionPerformed(evt);
         } else {
             JOptionPane.showMessageDialog(this, "Login já existente", "ERRO", JOptionPane.ERROR_MESSAGE);
@@ -173,6 +188,24 @@ public class MenuCadastrar extends javax.swing.JFrame {
         menlog.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTFNomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTFNomeMouseClicked
+        jTFNome.setText("");
+        jTFNome.setForeground(Color.BLACK);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFNomeMouseClicked
+
+    private void jTFLogMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTFLogMouseClicked
+        jTFLog.setText("");
+        jTFLog.setForeground(Color.BLACK);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFLogMouseClicked
+
+    private void jPFSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPFSenhaMouseClicked
+        jPFSenha.setText("");
+        jPFSenha.setForeground(Color.BLACK);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPFSenhaMouseClicked
 
     /**
      * @param args the command line arguments

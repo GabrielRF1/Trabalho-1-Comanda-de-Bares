@@ -7,19 +7,25 @@ package View;
 
 import java.awt.Color;
 
-
 import com.mycompany.comandadebares.Inicializador;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Programação
  */
 public class MenuLogin extends javax.swing.JFrame {
+
     /**
      * Creates new form MenuCad_Log
      */
     public MenuLogin() {
         initComponents();
+        setSize(436, 450);
+
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -54,7 +60,7 @@ public class MenuLogin extends javax.swing.JFrame {
         jPanel3.setLayout(new java.awt.GridLayout(2, 0));
 
         jLabel4.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        jLabel4.setText("GABRIEL'S RESTAURANT");
+        jLabel4.setText("GABRIEL'S BIGDINNER");
         jPanel3.add(jLabel4);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -98,7 +104,7 @@ public class MenuLogin extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(204, 204, 255));
 
         jBEntrar.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jBEntrar.setText("Entrar!");
+        jBEntrar.setText("ENTRAR!");
         jBEntrar.setToolTipText("Entrar com os dados fornecidos");
         jBEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +115,7 @@ public class MenuLogin extends javax.swing.JFrame {
         jLabel3.setText("OU");
 
         jBCadastrar.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jBCadastrar.setText("CADASTRe-SE");
+        jBCadastrar.setText("CADASTRE-SE");
         jBCadastrar.setToolTipText("Criar um novo cadastro");
         jBCadastrar.setMaximumSize(new java.awt.Dimension(109, 27));
         jBCadastrar.setMinimumSize(new java.awt.Dimension(109, 27));
@@ -119,7 +125,7 @@ public class MenuLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle3.png"))); // NOI18N
         jLabel6.setToolTipText("E.g.: Icon made by Freepik from www.flaticon.com");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -127,9 +133,9 @@ public class MenuLogin extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(54, 54, 54)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                         .addComponent(jBCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -144,17 +150,16 @@ public class MenuLogin extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
                         .addComponent(jBEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
                         .addGap(11, 11, 11)
-                        .addComponent(jBCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel6))
-                .addContainerGap(28, Short.MAX_VALUE))
+                        .addComponent(jBCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel6);
@@ -163,16 +168,16 @@ public class MenuLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTFLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTFLoginMouseClicked
-jTFLogin.setText("");
-jTFLogin.setForeground(Color.BLACK);
+        jTFLogin.setText("");
+        jTFLogin.setForeground(Color.BLACK);
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFLoginMouseClicked
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-MenuCadastrar mecad= new MenuCadastrar();
-this.dispose();
-mecad.setVisible(true);
-        
+        MenuCadastrar mecad = new MenuCadastrar();
+        this.dispose();
+        mecad.setVisible(true);
+
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
     private void jPFSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPFSenhaMouseClicked
@@ -182,11 +187,12 @@ mecad.setVisible(true);
     }//GEN-LAST:event_jPFSenhaMouseClicked
 
     private void jBEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEntrarActionPerformed
-        boolean estaAutenticado= Inicializador.GU.autenticarUsuarioSenha(jTFLogin.getText(), jPFSenha.getText());
-        MenuOpcoes menop = new MenuOpcoes();
-        if(estaAutenticado){
+        boolean estaAutenticado = Inicializador.GU.autenticarUsuarioSenha(jTFLogin.getText(), jPFSenha.getText());
+        EnhancedMenuOpcoes menop = new EnhancedMenuOpcoes();
+        if (estaAutenticado) {
+            this.dispose();
             menop.setVisible(true);
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "Usuário ou senha incorreto", "ERRO!!", JOptionPane.ERROR_MESSAGE);
         }
         // TODO add your handling code here:
@@ -223,6 +229,7 @@ mecad.setVisible(true);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+
                 new MenuLogin().setVisible(true);
             }
         });
