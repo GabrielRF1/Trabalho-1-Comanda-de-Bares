@@ -5,11 +5,13 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Programação
  */
-public class Produto extends Pedido {
+public class Produto extends Pedido implements Serializable{
 
     private final float precoDeCusto;
     private float taxaLucro, taxaRoubo;

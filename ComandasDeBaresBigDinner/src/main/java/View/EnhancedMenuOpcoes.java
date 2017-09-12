@@ -143,24 +143,6 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel26 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
-        jPanel27 = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
-        jPanel28 = new javax.swing.JPanel();
-        jPanel29 = new javax.swing.JPanel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jPanel31 = new javax.swing.JPanel();
-        jPanel32 = new javax.swing.JPanel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
@@ -703,121 +685,16 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
 
         jPanel3.add(jPanel12, "card6");
 
-        jPanel13.setLayout(new javax.swing.BoxLayout(jPanel13, javax.swing.BoxLayout.Y_AXIS));
-
-        jPanel27.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel27.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
-
-        jLabel38.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel38.setText("Visualizar comanda");
-        jLabel38.setToolTipText("");
-        jPanel27.add(jLabel38);
-
-        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(0, 153, 0));
-        jTextField9.setText("Mesa!");
-        jPanel27.add(jTextField9);
-
-        jButton7.setFont(new java.awt.Font("Sylfaen", 0, 14)); // NOI18N
-        jButton7.setText("Pesquisar");
-        jPanel27.add(jButton7);
-
-        jPanel13.add(jPanel27);
-
-        jPanel28.setBackground(new java.awt.Color(204, 204, 255));
-
-        jPanel29.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel29.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        jLabel41.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel41.setText("Nome:");
-        jLabel41.setToolTipText("             ");
-        jPanel29.add(jLabel41);
-
-        jLabel44.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel44.setText("                   ");
-        jLabel44.setToolTipText("");
-        jPanel29.add(jLabel44);
-
-        jLabel42.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel42.setText("Mesa:");
-        jPanel29.add(jLabel42);
-
-        jLabel45.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel45.setText("             ");
-        jPanel29.add(jLabel45);
-
-        jLabel43.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel43.setText("Funcionário que abriu:");
-        jPanel29.add(jLabel43);
-
-        jLabel46.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel46.setText("                ");
-        jPanel29.add(jLabel46);
-
-        jPanel31.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel31.setLayout(new java.awt.GridLayout(0, 5));
-        jScrollPane2.setViewportView(jPanel31);
-
-        jPanel32.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel32.setLayout(new java.awt.GridBagLayout());
-
-        jLabel52.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel52.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel52.setText("Preço final:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 23, 0);
-        jPanel32.add(jLabel52, gridBagConstraints);
-
-        jLabel53.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel53.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel53.setText("R$");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 6, 23, 0);
-        jPanel32.add(jLabel53, gridBagConstraints);
-
-        jLabel54.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel54.setText("status:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 222, 0, 103);
-        jPanel32.add(jLabel54, gridBagConstraints);
-
-        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
-        jPanel28.setLayout(jPanel28Layout);
-        jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane2)
-            .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 628, Short.MAX_VALUE)
         );
-        jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 322, Short.MAX_VALUE)
         );
-
-        jPanel13.add(jPanel28);
 
         jPanel3.add(jPanel13, "card7");
 
@@ -1138,7 +1015,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
             Pedido element = (Pedido) ite.next();
             if (element.getNome() == jComboBox2.getSelectedItem()) {
                 int quant = element.getQuantidade();
-                valordeUm = element.getValor();
+                valordeUm = element.getValor(); // if getqntd > 1 add!
                 if (quant <= Integer.parseInt(jTextField5.getText())) {
                     while (quant > 0 && quant <= Integer.parseInt(jTextField5.getText())) {
                         element.setQuantidade(element.getQuantidade() - 1);
@@ -1159,6 +1036,8 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         if (i == Integer.parseInt(jTextField5.getText())) {
             JOptionPane.showMessageDialog(this, "Pedidos excluídos com sucesso");
             mini.getGC().getComandas().get(Integer.parseInt(jTextField4.getText())).AtualizarValorTotal(-(i * valordeUm));
+            comanda=mini.getGC().getComandas().get(Integer.parseInt(jTextField4.getText()));
+            mini.getGC().addNewOrUpdatedComanda(comanda);
             mini.getP().GravaEmDisco(mini.getGC(), "Comandas.bin");
         }
     }
@@ -1248,7 +1127,6 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
@@ -1282,20 +1160,10 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1319,13 +1187,8 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1333,7 +1196,6 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator5;
@@ -1348,7 +1210,6 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }
