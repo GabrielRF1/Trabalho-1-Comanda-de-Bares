@@ -781,7 +781,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel53.setText("R$             ");
+        jLabel53.setText("R$");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
