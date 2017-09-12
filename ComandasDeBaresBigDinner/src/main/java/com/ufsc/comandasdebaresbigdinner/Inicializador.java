@@ -5,11 +5,8 @@
  */
 package com.ufsc.comandasdebaresbigdinner;
 
-import Model.Persistencia;
-import Model.GerenciadordeComanda;
-import Model.GerenciadordeUsuario;
+
 import View.MenuLogin;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 /**
  *

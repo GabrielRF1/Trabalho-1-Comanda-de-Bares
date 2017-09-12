@@ -5,15 +5,10 @@
  */
 package View;
 
-import Model.GerenciadordeComanda;
-import Model.GerenciadordeUsuario;
-import Model.Persistencia;
+
+import com.ufsc.comandasdebaresbigdinner.MiniControl;
 import java.awt.Color;
 
-import com.ufsc.comandasdebaresbigdinner.Inicializador;
-import com.ufsc.comandasdebaresbigdinner.MiniControl;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;

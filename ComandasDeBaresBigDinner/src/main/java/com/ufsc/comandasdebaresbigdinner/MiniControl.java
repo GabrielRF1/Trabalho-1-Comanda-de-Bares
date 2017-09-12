@@ -27,7 +27,7 @@ public class MiniControl {
 
     public MiniControl() throws IOException, FileNotFoundException, ClassNotFoundException {
         try {
-            GC = (GerenciadordeComanda) p.RecuperarObjeto("Comanda.bin");
+            GC = (GerenciadordeComanda) p.RecuperarObjeto("Comandas.bin");
         } catch (FileNotFoundException ex) {
             GC = new GerenciadordeComanda();
         }

@@ -73,12 +73,12 @@ public class Comanda implements Serializable {
 
     @Override
     public String toString() {
-        String status = "cliente: " + cliente.getNome() + ", Usuário que abriu: " + usuario.getNome()
+        return "cliente: " + cliente.getNome() + ", Mesa: " + cliente.getMesa() + ", Usuário que abriu: " + usuario.getNome()
                 + "\n--------------\n"
-                + "pedidos:\n"
+                + "Pedidos|\t|     Descrição    |\t|Quantidade|\t|valor total|\n"
                 + "\n--------------\n"
-                + "valorTotal=" + valorTotal + '}';
-        return status;
+                + "valorTotal: R$" + valorTotal;
+
     }
 
 }

@@ -143,6 +143,11 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel26 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        jLabel41 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
@@ -328,7 +333,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.PAGE_AXIS));
 
         jPanel8.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
+        jPanel8.setLayout(new java.awt.FlowLayout(3));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 153, 0));
@@ -390,7 +395,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.Y_AXIS));
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        jPanel14.setLayout(new java.awt.FlowLayout(0));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 153, 0));
@@ -449,7 +454,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jComboBox1, 0, 212, Short.MAX_VALUE)
                     .addComponent(jScrollPane3))
-                .addGap(0, 279, Short.MAX_VALUE))
+                .addGap(0, 125, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -490,7 +495,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel10.setLayout(new javax.swing.BoxLayout(jPanel10, javax.swing.BoxLayout.Y_AXIS));
 
         jPanel22.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel22.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
+        jPanel22.setLayout(new java.awt.FlowLayout(3));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 153, 0));
@@ -545,7 +550,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel11.setLayout(new javax.swing.BoxLayout(jPanel11, javax.swing.BoxLayout.Y_AXIS));
 
         jPanel21.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel21.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
+        jPanel21.setLayout(new java.awt.FlowLayout(3));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(0, 153, 0));
@@ -615,7 +620,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
 
         jPanel24.setBackground(new java.awt.Color(204, 204, 255));
         jPanel24.setMinimumSize(new java.awt.Dimension(291, 72));
-        jPanel24.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        jPanel24.setLayout(new java.awt.FlowLayout(0));
 
         jLabel29.setText("                                              ");
         jPanel24.add(jLabel29);
@@ -636,7 +641,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jPanel12.setLayout(new javax.swing.BoxLayout(jPanel12, javax.swing.BoxLayout.Y_AXIS));
 
         jPanel17.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel17.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
+        jPanel17.setLayout(new java.awt.FlowLayout(3));
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(0, 153, 0));
@@ -685,15 +690,54 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
 
         jPanel3.add(jPanel12, "card6");
 
+        jPanel13.setBackground(new java.awt.Color(204, 204, 255));
+
+        jPanel27.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel27.setLayout(new java.awt.FlowLayout(-1));
+
+        jLabel38.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel38.setText("Visualizar Comanda");
+        jPanel27.add(jLabel38);
+
+        jTextField9.setForeground(java.awt.Color.lightGray);
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField9.setText("Mesa");
+        jTextField9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField9MouseClicked(evt);
+            }
+        });
+        jPanel27.add(jTextField9);
+
+        jButton7.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(0, 153, 0));
+        jButton7.setText("Pesquisar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel27.add(jButton7);
+
+        jLabel41.setText("   ");
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 628, Short.MAX_VALUE)
+            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(208, 208, 208)
+                .addComponent(jLabel41)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 322, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(98, 98, 98)
+                .addComponent(jLabel41)
+                .addGap(0, 152, Short.MAX_VALUE))
         );
 
         jPanel3.add(jPanel13, "card7");
@@ -753,6 +797,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         this.dispose();
+
         try {
             new MenuLogin().setVisible(true);
         } catch (IOException ex) {
@@ -1001,12 +1046,26 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         if (mini.getGC().getComandas().get(Integer.parseInt(jTextField6.getText())).isComandaAberta()) {
             mini.getGC().getComandas().get(Integer.parseInt(jTextField6.getText())).fecharComanda();
+            mini.getP().GravaEmDisco(mini.getGC(), "Comandas");
             JOptionPane.showMessageDialog(this, "Comanda fechada com sucesso");
         } else {
             JOptionPane.showMessageDialog(this, "Comanda anteriormente fechada");
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        Comanda com = mini.getGC().getComandas().get(Integer.parseInt(jTextField9.getText()));
+        jLabel41.setText(com.toString());
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jTextField9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField9MouseClicked
+        jTextField9.setText("");
+        jTextField9.setForeground(Color.LIGHT_GRAY);
+        jTextField9.setFont(new Font("Dialog", Font.PLAIN, 16));
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9MouseClicked
     private void DiminuirQuantidade(Comanda comanda) {
         int i = 0;
         double valordeUm = 1;
@@ -1015,7 +1074,9 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
             Pedido element = (Pedido) ite.next();
             if (element.getNome() == jComboBox2.getSelectedItem()) {
                 int quant = element.getQuantidade();
-                valordeUm = element.getValor(); // if getqntd > 1 add!
+                if (quant == 1) {
+                    valordeUm = element.getValor();
+                }            // if getqntd > 1 add!
                 if (quant <= Integer.parseInt(jTextField5.getText())) {
                     while (quant > 0 && quant <= Integer.parseInt(jTextField5.getText())) {
                         element.setQuantidade(element.getQuantidade() - 1);
@@ -1036,7 +1097,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         if (i == Integer.parseInt(jTextField5.getText())) {
             JOptionPane.showMessageDialog(this, "Pedidos excluídos com sucesso");
             mini.getGC().getComandas().get(Integer.parseInt(jTextField4.getText())).AtualizarValorTotal(-(i * valordeUm));
-            comanda=mini.getGC().getComandas().get(Integer.parseInt(jTextField4.getText()));
+            comanda = mini.getGC().getComandas().get(Integer.parseInt(jTextField4.getText()));
             mini.getGC().addNewOrUpdatedComanda(comanda);
             mini.getP().GravaEmDisco(mini.getGC(), "Comandas.bin");
         }
@@ -1074,6 +1135,8 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
         jTextField6.setForeground(Color.LIGHT_GRAY);
         jTextField7.setText("");
         jLabel27.setText("R$");
+        jTextField9.setText("Mesa");
+        jTextField9.setForeground(Color.LIGHT_GRAY);
     }
 
     /**
@@ -1127,6 +1190,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
@@ -1160,9 +1224,11 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1187,6 +1253,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel4;
@@ -1210,6 +1277,7 @@ public class EnhancedMenuOpcoes extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }
