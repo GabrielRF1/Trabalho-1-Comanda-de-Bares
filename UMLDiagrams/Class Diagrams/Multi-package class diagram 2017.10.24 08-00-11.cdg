@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="ExecaoPalavraEmExcesso" package="ine5404" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Inicializador" package="ine5404" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TratadorDePalavras" package="ine5404" visibility="public" xPosition="368.0" yPosition="187.0">
+      <Fields>
+        <Field name="setDePalavras" type="String[]" visibility="private" isFinal="true"/>
+        <Field name="palabras" type="TratadorDePalavras" visibility="private" isStatic="true"/>
+        <Field name="palavrasSorteadas" type="ArrayList&lt;char[]&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getConjuntoDePalavras" returnType="TratadorDePalavras" visibility="public" isStatic="true"/>
+        <Method name="sortearPalavra" returnType="char[]" visibility="public"/>
+        <Method name="sortearPalavra" returnType="char[]" visibility="public">
+          <Argument type="boolean" name="sentidoPositivo"/>
+        </Method>
+        <Method name="adicionarNaListaPalavrasEscolhidas" returnType="void" visibility="public">
+          <Argument type="char[]" name="palavra"/>
+          <Argument type="boolean" name="sentidoPositivo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VictoryDetector" package="ine5404" visibility="public" xPosition="1548.0" yPosition="564.0">
+      <Fields>
+        <Field name="lettersBoolean" type="boolean[][]" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Field" name="campo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="fillWithTrues" returnType="void" visibility="private"/>
+        <Method name="countTrues" returnType="int" visibility="private"/>
+        <Method name="conferirFimDeJogo" returnType="boolean" visibility="public">
+          <Argument type="JToggleButton[][]" name="botoesView"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorDiagonal" package="Model" visibility="public" xPosition="1272.0" yPosition="141.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="embaralhar" returnType="Character[][]" visibility="public">
+          <Argument type="int" name="numDePalabras"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+        </Method>
+        <Method name="checarSePosicaoDisponivel" returnType="boolean" visibility="public">
+          <Argument type="char[]" name="palavra"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+          <Argument type="Point" name="ponto"/>
+          <Argument type="boolean" name="isDiagonalPrincipal"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorHorizontal" package="Model" visibility="public" xPosition="2012.0" yPosition="141.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="embaralhar" returnType="Character[][]" visibility="public">
+          <Argument type="int" name="numDePalabras"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+        </Method>
+        <Method name="checarSePosicaoDisponivel" returnType="boolean" visibility="public">
+          <Argument type="char[]" name="palavra"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+          <Argument type="Point" name="ponto"/>
+          <Argument type="boolean" name="sentidoPositivo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorMultiplo" package="Model" visibility="public" xPosition="2012.0" yPosition="406.0">
+      <Fields>
+        <Field name="diagonal" type="EmbaralhadorDiagonal" visibility="package"/>
+        <Field name="horizontal" type="EmbaralhadorHorizontal" visibility="package"/>
+        <Field name="vertical" type="EmbaralhadorVertical" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="ordenamento"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="embaralhar" returnType="Character[][]" visibility="public">
+          <Argument type="int" name="numDePalabras"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+        </Method>
+        <Method name="checarSePosicaoDisponivel" returnType="boolean" visibility="public">
+          <Argument type="char[]" name="palavra"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+          <Argument type="Point" name="ponto"/>
+          <Argument type="boolean" name="sentidoPositivo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorVertical" package="Model" visibility="public" xPosition="1645.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="embaralhar" returnType="Character[][]" visibility="public">
+          <Argument type="int" name="numDePalabras"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+        </Method>
+        <Method name="checarSePosicaoDisponivel" returnType="boolean" visibility="public">
+          <Argument type="char[]" name="palavra"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+          <Argument type="Point" name="ponto"/>
+          <Argument type="boolean" name="sentidoPositivo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Field" package="Model" visibility="public" xPosition="1002.0" yPosition="507.0">
+      <Fields>
+        <Field name="grade" type="Character[][]" visibility="protected"/>
+        <Field name="limiteDePlavras" type="int" visibility="private" isFinal="true"/>
+        <Field name="embaralhador" type="Embaralhador" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Point" name="coordenadas"/>
+          <Argument type="int" name="ordenamento"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGrade" returnType="Character[][]" visibility="public"/>
+        <Method name="fillRandomSpaces" returnType="void" visibility="private">
+          <Argument type="VictoryDetector" name="vi"/>
+        </Method>
+        <Method name="fillNullSpaces" returnType="void" visibility="private"/>
+        <Method name="chamarEmbaralhador" returnType="void" visibility="public">
+          <Argument type="int" name="qntPalabras"/>
+          <Argument type="int" name="ordenamento"/>
+          <Argument type="VictoryDetector" name="vi"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Embaralhador" package="Model" visibility="public" xPosition="924.0" yPosition="344.0">
+      <Methods>
+        <Method name="embaralhar" returnType="Character[][]" visibility="public">
+          <Argument type="int" name="numDePalabras"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+        </Method>
+        <Method name="checarSePosicaoDisponivel" returnType="boolean" visibility="public">
+          <Argument type="char[]" name="palavra"/>
+          <Argument type="Character[][]" name="campoParaDistorcao"/>
+          <Argument type="Point" name="ponto"/>
+          <Argument type="boolean" name="sentidoOuDiagonal"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Model.Field" target="ine5404.VictoryDetector" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Model.EmbaralhadorDiagonal" target="Model.Embaralhador"/>
+    <HasRelation name="vertical" source="Model.EmbaralhadorMultiplo" target="Model.EmbaralhadorVertical" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ine5404.TratadorDePalavras" target="ine5404.TratadorDePalavras" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="embaralhador" source="Model.Field" target="Model.Embaralhador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="palabras" source="ine5404.TratadorDePalavras" target="ine5404.TratadorDePalavras" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Model.EmbaralhadorMultiplo" target="Model.Embaralhador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Model.EmbaralhadorVertical" target="Model.Embaralhador"/>
+    <HasRelation name="horizontal" source="Model.EmbaralhadorMultiplo" target="Model.EmbaralhadorHorizontal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Model.EmbaralhadorHorizontal" target="Model.Embaralhador"/>
+    <HasRelation name="diagonal" source="Model.EmbaralhadorMultiplo" target="Model.EmbaralhadorDiagonal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
